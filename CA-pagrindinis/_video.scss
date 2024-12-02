@@ -1,0 +1,13 @@
+@use 'responsive' as r;
+
+.video {
+    width: 100%;
+    text-align: center;
+    padding: 60px;
+    margin-top: 50px;
+
+    iframe {
+        width: 100%;
+    }
+
+}

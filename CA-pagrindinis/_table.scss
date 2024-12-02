@@ -1,0 +1,60 @@
+@use 'variables';
+
+
+.differences {
+    display: grid;
+    text-align: center;
+    width: 100%;
+
+    .font-size {
+    text-align: left;
+    padding-left: 20px;
+    }
+}
+
+.description-expanded {
+    display: grid;
+    border-spacing: 0;
+    table-layout: fixed;
+    margin-top: 133px;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+
+    table {
+        font-size: 14px;
+        border-collapse: collapse;
+        padding: 21px 3px;
+
+        @include r.sm {
+            width: 90%;
+            font-size: 10px;
+        }
+
+        tr:first-child td:nth-child(2) {
+            border-radius: 8px 8px 0px 0;
+        }
+
+
+        tr:not(:last-child) td:nth-child(2) {
+            border-bottom: 1px solid #594dee;
+        }
+
+        td:nth-child(2) {
+            background: variables.$color-primary;
+            color: variables.$color-white;
+        }
+
+        tr td {
+            border-bottom: 1px solid variables.$color-line;
+            padding: 21px 3px;
+        }
+
+    }
+}

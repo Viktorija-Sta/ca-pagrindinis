@@ -1,0 +1,30 @@
+@use 'variables';
+@use 'responsive' as r;
+
+
+.partners-logo {
+    width: 100%;
+
+    ul {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        width: 100%;
+        
+       
+
+        @include r.md {
+        grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @include r.sm {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .logo {
+            width: 50%;
+            height: 60%;
+        }
+    }
+
+}

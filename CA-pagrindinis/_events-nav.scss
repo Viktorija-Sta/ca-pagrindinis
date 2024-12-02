@@ -1,0 +1,46 @@
+@use 'variables';
+
+
+.event-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0f02b7;
+
+    .left {
+        display: flex;
+        margin-bottom: 26px;
+        align-items: center;
+        color: variables.$color-white;
+
+        img {
+            display: inline-flex;
+            background-color: variables.$color-white;
+            border-radius: 50%;
+            width: 40px;
+            margin: 10px;
+        }
+
+        .back {
+
+        }
+        .next {
+
+        }
+    }
+
+    .right {
+        .button {
+            background: white;
+            border-radius: 50px;
+            box-sizing: border-box;
+            color: variables.$color-black;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 13px 30px 11px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+}

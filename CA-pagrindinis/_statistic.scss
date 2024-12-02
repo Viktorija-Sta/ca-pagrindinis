@@ -1,0 +1,100 @@
+@use 'variables' ;
+@use 'responsive' as r;
+
+
+
+.statistic {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .description-wrap {
+        h2 {
+            font-size: 60px;
+            padding-left: 30px;
+            padding-bottom: 30px;
+        }
+
+        p {
+            width: 50%;
+            margin-left: 80px;
+        }
+    }
+}
+
+.counter-of-statistic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: variables.$color-white;
+
+    @include r.md {
+        flex-direction: column;
+        align-items: flex-start;
+    
+    }
+    
+    .statistic-counter {
+        justify-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 88px;
+        
+        ::before {
+            background: #000;
+            bottom: 94px;
+            content: "";
+            display: block;
+            height: 40px;
+            left: 0;
+            position: absolute;
+            width: 2px;;
+    
+        }
+        li {
+            list-style-type: none;
+        }
+
+        .number-with-line {
+            font-size: 100px;
+            ::after {
+                animation: blink ;
+            }
+        }
+        .name-of-number {
+            font-weight: bold;
+        }
+
+        .number {
+            font-size: 100px;
+
+        }
+    }
+    .statistic-counter-two {
+        justify-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 88px;
+
+        @include r.md {
+           margin-top: 0;
+        }
+
+
+    
+        li {
+            list-style-type: none;
+        }
+
+        .number {
+            font-size: 100px;
+        }
+        
+        .name-of-number {
+            font-weight: bold;
+        }
+    }
+}

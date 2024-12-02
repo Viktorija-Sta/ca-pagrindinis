@@ -1,0 +1,92 @@
+@use 'variables';
+@use 'responsive' as r;
+
+.reviews {
+    display: flex;
+    width: 90%;
+    gap: 30px;
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @include r.lg {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .reviews-description, .reviews-description-2 {
+        background-color: variables.$color-black;
+        color:variables.$color-white;
+        padding: 20px;
+        gap: 20px;
+        width: 50%;
+        padding-bottom: 100px;
+       
+        @include r.lg {
+            width: 100%;
+            
+        }
+
+        //  ::after {
+        //     // background-position: 0 100%;
+        //     // background-repeat: no-repeat;
+        //     // bottom: 40px;
+            
+        //     // display: block;
+        //     // height: 40px;
+        //     // left: 40px;
+        //     // position: absolute;
+        //     // width: 46px;
+        //     // object-fit: cover;
+        // }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+
+            @include r.lg {
+                width: 50%;   
+            }
+
+            
+            .profile-picture {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                margin-right: 30px;
+            }
+            .profile-info {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                padding-bottom: 30px;
+                
+                span {
+                    color: variables.$color-secondary;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+
+.reviews p::after {
+    background-image: url(images/118650_quote_left_icon.svg);
+    content: "";
+    object-fit: cover;
+    object-fit: scale-down;
+    background-repeat: no-repeat;
+    display: block;
+    height: 44px;
+    left: 40px;
+    width: 46px;
+    position: relative;
+    top: 76px;
+}
